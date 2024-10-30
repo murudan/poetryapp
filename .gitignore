@@ -40,3 +40,16 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+# Compiled output
+dist
+node_modules
+out-tsc
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# IDEs and editors
+.idea
+.vscode
+# Other files
+.angular/cache

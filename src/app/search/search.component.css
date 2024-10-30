@@ -1,0 +1,22 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    width: 100px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,26 @@
+<app-search (search)="onSearch($event.author, $event.title)" (error)="errorMessage = $event"></app-search>
+<app-error [message]="errorMessage"></app-error>
+
+<div *ngIf="loading">Loading...</div>
+
+<div *ngIf="titles.length">
+  <h3>Titles by Emily Dickinson:</h3>
+  <ul>
+    <li *ngFor="let title of titles">{{ title }}</li>
+  </ul>
+</div>
+
+<div *ngIf="!loading && poems.length">
+  <h3>Search Results:</h3>
+  <ul>
+    <li *ngFor="let poem of poems" (click)="showPoemDetails(poem)">
+      <strong>{{ poem.title }}</strong> by {{ poem.author }}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedPoem">
+  <h3>{{ selectedPoem.title }}</h3>
+  <p><strong>Author:</strong> {{ selectedPoem.author }}</p>
+  <p *ngFor="let line of selectedPoem.content">{{ line }}</p>
+</div>
